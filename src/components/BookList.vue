@@ -1,6 +1,11 @@
 <template>
     <div>
         <h1> {{ title }} </h1>
+        <ul>
+            <div v-for="book in books" :key="book">
+                <li> {{ book.title }} ,{{ book.author }} </li>
+            </div>
+        </ul>
     </div>
 </template>
 
@@ -10,6 +15,11 @@
         data() {
             return {
                 title: "All Books",
+                books: [
+                    {title: 'Self-Reliance', author: 'Ralph Waldo Emerson'},
+                    {title: 'American Gods', author: 'Neil Gaiman'},
+                    {title: 'Amusing Ourselves to Death', author: 'Neil Postman'},
+                ]
             };
         },
     };
@@ -18,5 +28,11 @@
 <style lang="css">
     h1, h2{
         font-weight: normal;
+    }
+    ul{
+        list-style-type: none;
+        padding: 0;
+        display: block;
+        margin: 0 10px;
     }
 </style>

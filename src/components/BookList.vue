@@ -3,7 +3,7 @@
         <h1> {{ title }} </h1>
         <ul>
             <div v-for="book in books" :key="book">
-                <li> {{ book.title }} ,{{ book.author }} </li>
+                <li> {{ book.title }} : {{ book.author }} </li>
             </div>
         </ul>
     </div>
@@ -31,8 +31,9 @@
     }
     ul{
         list-style-type: none;
-        padding: 0;
+        padding: 0;}
+    li{
         display: block;
         margin: 0 10px;
-    }
+    } 
 </style>
